@@ -21,8 +21,8 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
 - npm (Node Package Manager)
 
 ## Configuração
-- Para iniciar o servidor entre na pasta Servidor/Src e no terminal utilize o comando npm start
-- Para iniciar o cliente entre na pasta Cliente/Src e no terminal utilize o comando npm start
+- Para iniciar o servidor entre na pasta Servidor/server/src e no terminal utilize o comando npm start
+- Para iniciar o cliente entre na pasta Cliente/src e no terminal utilize o comando npm start
 
 ### Instalação de Dependências
 
