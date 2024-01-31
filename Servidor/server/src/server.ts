@@ -9,7 +9,6 @@ import connectDb from './config/dbConn';
 import { credentials } from './middleware/credentials';
 const logMiddleware = require('./middleware/logEvents')
 const cookieParser = require('cookie-parser')
-import { exec } from 'child_process';
 
 
 // import { userRoutes } from './routes/userRoutes';
