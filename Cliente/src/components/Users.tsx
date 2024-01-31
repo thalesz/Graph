@@ -1,0 +1,60 @@
+import React, { useState, useEffect } from "react";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
+// /
+interface User {
+  username: string;
+  // Adicione outros campos do usuário, se necessário
+}
+
+const Users: React.FC = () => {
+  const [users, setUsers] = useState<User[]>([]);
+  // const { setAuth } = useContext(AuthContext);
+  // const navigate = useNavigate();
+
+  const axiosPrivate = useAxiosPrivate();
+
+  useEffect(() => {
+    let isMounted = true;
+    const controller = new AbortController();
+
+    const getUsers = async () => {
+      try {
+        const response = await axiosPrivate.get<User[]>('/users', {
+          signal: controller.signal
+        });
+
+        console.log(response);
+        console.log(response.data);
+        if (isMounted) {
+          setUsers(response.data);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    getUsers();
+
+    return () => {
+      isMounted = false;
+      controller.abort();
+    };
+  }, [axiosPrivate]);
+
+  return (
+    <article>
+      <h2>Users List</h2>
+      {users.length ? (
+        <ul>
+          {users.map((user, i) => (
+            <li key={i}>{user?.username}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>No users to display</p>
+      )}
+    </article>
+  );
+};
+
+export default Users;

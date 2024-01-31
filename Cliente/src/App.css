@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Hind:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200..800&family=Hind:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200..800&family=Hind:wght@300;400;500;600;700&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.PageFormImage{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #d0e3ff, #c9e9ff, #c3efff, #c0f5ff, #bffaff);
+    
+}
+
+.BemVindo h1{
+    line-height: 20px;
+    color: #032535;
+}
+.BemVindo p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #000;
+}
+.midBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column; /* Alteração para column */
+    padding: 20px;
+    width: 50vh;
+    min-height: 35vh;
+    /* From https://css.glass */
+/* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.2px);
+    -webkit-backdrop-filter: blur(1.2px);
+}
+
+.midBox form{
+    display: flex;
+    flex-direction: column; /* Alteração para column */
+    margin: 7px;
+}
+.midBox label{
+    margin: 1px 0px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px; 
+}
+.input-wrapper input {
+    width: 350px;
+    background-color: #b5deff;
+    color: #242424;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+    margin: 8px;
+  }
+  
+  .input-wrapper input:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;  }
+
+    .input-wrapper input:hover{
+        outline: 1px solid lightgrey;
+
+    }
+
+.midBox button{
+    align-self:center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 250px;
+    background-color: #6f8dd9;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 50px;
+    font-style: normal;
+    font-size: 20px;
+}
+.midBox button:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Adiciona sombra no hover */
+    background-color: #9580fd;
+
+}
+.midBox p{
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    font-family: "Hind", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0;
+    line-height: 1;
+    
+}
+
+.lineLink{
+    text-decoration: none;
+    color:#022838;
+    cursor: pointer;
+}
+.lineLink:hover{
+    color:#0070a0;
+}
+
+.line:hover{
+    transform: scale(1.1);
+}
+
+.containerNewConta{
+}
+.imgContainer {
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse as dimensões do contêiner */
+  }
+.imglogin{
+    width:90%;
+    height: auto;
+}
+.instructions {
+    border-radius: 0.3rem; /* Reduzi o raio da borda para uma aparência mais sutil */
+    color: #333;
+    padding: 0.3rem 0.5rem; /* Ajustei o padding para mais espaço interno e melhor aparência */
+    position: relative;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil */
+    margin: 10px 0px; /* Adicionei uma margem inferior para separar do input abaixo */
+    width: 350px;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid,
+.invalid {
+    margin-left: 0.25rem;
+}
+
+.valid {
+    color: limegreen;
+}
+
+.invalid {
+    color: red;
+}
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* Estilos para o botão do menu */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Noto+Sans+TC:wght@500&family=Tajawal:wght@500&family=Ubuntu:wght@500&display=swap');
+#btmenuid{
+    position: fixed;
+    top: 15px; /* Ajuste a posição do topo conforme necessário */
+    left: 10px; /* Ajuste a posição da esquerda conforme necessário */
+    z-index: 1000; /* Garante que o botão fique acima dos outros elementos */
+    padding: 5px 12px;
+}
+.botao-menu {
+    cursor: pointer;
+    color: black;
+    background-color:#6f8dd9;
+    border:none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius:2px;
+    transition: left 0.2s ease-in-out; /* Adiciona uma transição suave ao mostrar/ocultar o menu */
+  }
+  .botao-menu:hover{
+    color: #333; /* Cinza escuro */
+    background-color: #9580fd; /* Cinza claro */
+  }
+  .menu-completo .botao-menu{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  .menu-completo #btmenuid{
+    left: 200px;
+  }
+  /* Estilos para o menu-lateral */
+  .menu-lateral {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9; /* Cor de fundo do menu */
+    width: 250px; /* Largura do menu */
+    height: 100vh; /* Altura total da tela */
+    position: fixed;
+    top: 0; /* Alinha o menu no topo da tela */
+    left: -250px; /* Esconde o menu inicialmente */
+    transition: left 0.3s ease-in-out; /* Adiciona uma transição suave ao mostrar/ocultar o menu */
+    z-index: 999; /* Garante que o menu fique abaixo do botão */
+  }
+  
+  /* Estilos para o menu completo */
+  .menu-completo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.2px);
+    -webkit-backdrop-filter: blur(1.2px);
+    width: 250px; /* Largura do menu */
+    height: 100vh; /* Altura total da tela */
+    position: fixed;
+    top: 0; /* Alinha o menu no topo da tela */
+    left: 0; /* Posição inicial do menu completo */
+    transition: left 0.3s ease-in-out; /* Adiciona uma transição suave ao mostrar/ocultar o menu */
+    z-index: 998; /* Garante que o menu fique abaixo do botão */
+  }
+  /* Estilos para a lista de menu */
+.lista-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 230px;
+  }
+  
+  /* Estilos para a linha separadora */
+  .linha-separadora {
+    border-top: 1px solid #555;
+    margin: 10px 0;
+  }
+  
+  /* Estilos para os itens do menu */
+  .lista-menu li {
+    color: #250a0a;
+    margin: 10px 0;
+    font-size: 20px;
+    display: flex;
+    justify-content:center;
+    padding: 5px;
+    font-weight: 550;   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  }
+  
+  .lista-menu li:hover{
+    background-color:#9580fd;
+    border-radius: 5px;
+    opacity: 1;
+
+  }
+  
+  /* Estilos para os links no menu */
+  .lista-menu .link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease-in-out; /* Adiciona uma transição suave na cor ao passar o mouse */
+  }
+  
+  /* Estilos para o ícone no menu */
+  .lista-menu .icon {
+    margin-right: 10px;
+  }
+  
+  /* Efeito de hover nos links do menu */
+  .lista-menu .link:hover {
+    color: black; /* Cor alterada ao passar o mouse */
+  }
+  
+  .link{
+    text-align: center; /* Centraliza horizontalmente */
+    line-height: 1; /* Espaçamento entre linhas */
+    margin: 0; 
+    letter-spacing: 2px;
+    margin-top: 5px;
+  }
+
+  .cont {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que os itens quebrem para a próxima linha */
+    margin: 0;
+   
+  }
+  
+  /* Estilo dos filhos */
+  .cont > * {
+    flex: 0.3 1; /* Define a capacidade de crescimento, encolhimento e base para auto */
+    
+  }
+    
+.content {
+      flex: 1; /* Ocupa todo o espaço disponível */ /* Espaçamento interno para o conteúdo */
+      /* Outros estilos do conteúdo */
+}
+
+.Logout{
+  position: fixed;
+  top: 92vh; /* Ajuste a posição do topo conforme necessário */
+  left: 10px; /* Ajuste a posição da esquerda conforme necessário */
+}
+    
+
+/*Card*/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  background-color: white;
+  width: 300px;
+  height: 370px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
+  0 2px 4px -2px rgba(0,0,0,.1);
+}
+
+.header {
+  position: relative;
+  background-clip: border-box;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.75rem;
+  background-color: rgb(33 150 243);
+  box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
+  height: auto;
+  text-align: center;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+
+.info {
+  border: none;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.title {
+  margin-top: 15px;
+  color: rgb(38 50 56);
+  letter-spacing: 0;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.footer {
+  padding: 0.75rem;
+  border: 1px solid rgb(236 239 241);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 140, 255, 0.082);
+}
+
+.tag {
+  font-weight: 300;
+  font-size: .75rem;
+  display: block;
+}
+
+.action {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 6px -1px rgba(33,150,243,.4),0 2px 4px -2px rgba(33,150,243,.4);
+  color: rgb(255 255 255);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(33 150 243);
+  border-radius: 0.5rem;
+}
+
+/*posição card */
+
+.CardFeed {
+  display: flex;
+  justify-content: space-around; /* Distribui os elementos uniformemente ao longo do espaço disponível */
+  align-items: flex-start; /* Alinha os elementos ao topo */
+  flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha se não houver espaço suficiente */
+  margin: 20px; /* Margem ao redor da seção */
+}
+
+
+.BoxForm{
+  width: 130vh;
+  height: 30vh;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #bebebe,
+             -5px -5px 10px #ffffff;
+  margin:5vh;
+}
+
+.HeaderForm{
+  display: flex;
+  flex-direction: column; /* Garante que os filhos fiquem um embaixo do outro */
+  align-items:center;
+  justify-content: center;
+}
