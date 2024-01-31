@@ -20,13 +20,15 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
 - Node.js
 - npm (Node Package Manager)
 
-## Configuração
-- Para iniciar o servidor entre na pasta Servidor/server/src e no terminal utilize o comando npm start
-- Para iniciar o cliente entre na pasta Cliente/src e no terminal utilize o comando npm start
-
 ### Instalação de Dependências
 
-No diretório do servidor, execute:
+No diretório do servidor e do cliente, execute:
 
 ```bash
 npm install
+```
+
+## Inicialização
+- Para iniciar o servidor entre na pasta Servidor/server/src e no terminal utilize o comando npm start
+- Para iniciar o cliente entre na pasta Cliente/src e no terminal utilize o comando npm start
+
