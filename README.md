@@ -24,21 +24,21 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
 
 Navegue até o diretório do projeto:
 
-    ```bash
+    
     cd Graph
-    ```
+    
 
 Execute o script de instalação:
 
-    ```bash
+    
     ./install.sh
-    ```
+    
 
 Certifique-se de conceder permissões de execução ao script se necessário:
 
-    ```bash
+    
     chmod +x install.sh
-    ```
+    
 
    **Nota:** Caso você tenha que executar o comando `chmod +x`, certifique-se de que está no diretório correto.
 
