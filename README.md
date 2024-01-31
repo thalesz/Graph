@@ -22,11 +22,25 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
 
 ### Instalação de Dependências
 
-No diretório do servidor e do cliente, execute:
+Navegue até o diretório do projeto:
 
-```bash
-npm install
-```
+    ```bash
+    cd Graph
+    ```
+
+Execute o script de instalação:
+
+    ```bash
+    ./install.sh
+    ```
+
+Certifique-se de conceder permissões de execução ao script se necessário:
+
+    ```bash
+    chmod +x install.sh
+    ```
+
+   **Nota:** Caso você tenha que executar o comando `chmod +x`, certifique-se de que está no diretório correto.
 
 ## Inicialização
 - Para iniciar o servidor entre na pasta Servidor/server/src e no terminal utilize o comando npm start
