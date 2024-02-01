@@ -37,8 +37,11 @@ Execute o script de instalação:
 Certifique-se de conceder permissões de execução ao script se necessário:
 
     
-    chmod +x install.sh
-    
+    chmod +x install.sh 
+
+    Ou
+    sudo chmod +x install.sh
+
 
    **Nota:** Caso você tenha que executar o comando `chmod +x`, certifique-se de que está no diretório correto.
 
