@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faHome, faUser, faCog } from '@fortawesome/free-solid-svg-icons';
 import MenuItems from './MenuItems';
 import BtnLogout from './btnLogout';
-const Menu: React.FC = ()=>{
-    const [menuAberto, setMenuAberto] = useState(false);
-    const [menuCompleto, setMenuCompleto] = useState(false);
+
+const Menu: React.FC<{ menuCompleto: boolean; setMenuCompleto: React.Dispatch<React.SetStateAction<boolean>> }> = ({ menuCompleto, setMenuCompleto }) => {
+  const [menuAberto, setMenuAberto] = useState(false);
   
     const toggleMenu = () => {
       if (menuCompleto) {

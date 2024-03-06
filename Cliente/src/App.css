@@ -79,7 +79,7 @@
 
     }
 
-.midBox button{
+.midBox button  {
     align-self:center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -319,7 +319,11 @@
 .content {
       flex: 1; /* Ocupa todo o espaço disponível */ /* Espaçamento interno para o conteúdo */
       /* Outros estilos do conteúdo */
+      margin-right: 200px;
+
 }
+
+
 
 .Logout{
   position: fixed;
@@ -330,16 +334,20 @@
 
 /*Card*/
 
+.card-other{
+  border-radius: 0.75rem;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
+  0 2px 4px -2px rgba(0,0,0,.1);
+}
+
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 0.75rem;
-  background-color: white;
   width: 300px;
   height: 370px;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
-  0 2px 4px -2px rgba(0,0,0,.1);
+
 }
 
 .header {
@@ -414,16 +422,26 @@
   flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha se não houver espaço suficiente */
   margin: 20px; /* Margem ao redor da seção */
 }
+.Page{
+  margin:5vh;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
 
-
+}
 .BoxForm{
-  width: 130vh;
-  height: 30vh;
+  width: 80vh;
+  height: 45vh;
   border-radius: 30px;
-  background: #e0e0e0;
+  background: #baacff;
   box-shadow: 5px 5px 10px #bebebe,
              -5px -5px 10px #ffffff;
-  margin:5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin: 10px;
+  
 }
 
 .HeaderForm{
@@ -431,4 +449,80 @@
   flex-direction: column; /* Garante que os filhos fiquem um embaixo do outro */
   align-items:center;
   justify-content: center;
+  
+  line-height: 0.5;
+  height: 35%;
+  margin-top: 20px; 
+
+  text-align: center; /* Alinha o texto ao centro */
+}
+.HeaderForm h1{
+line-height: 0.8;
+}
+
+.HeaderForm h2{
+  font-size: 15px;
+  word-wrap: break-word; /* Adiciona quebra de linha em palavras longas */
+  /* ou */
+  max-width: 600px; /* Ajuste o valor conforme necessário */
+  align-self:center;
+}
+.BoxSelect{
+  margin-top: 10px;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+
+  /* display:flex;
+   */
+}
+
+/* styles.css */
+
+.select-container {
+  width: 250px; /* ou o valor desejado */
+  margin-bottom: 3px; /* espaço entre os SelectGenerico */
+}
+
+.select-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.card-other button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.card-other button:hover {
+  letter-spacing: 3px;
+  background-color: #9580fd;
+  color: hsl(0, 0%, 100%);
+  box-shadow: #9580fd;
+}
+
+.card-other button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
 }

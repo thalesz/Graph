@@ -10,10 +10,10 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ cardData }) => {
-  const { title, info, tags,link } = cardData;
+  const {title,info,tags,link } = cardData;
 
   return (
-    <div className="card">
+    <div className="card card-other">
       <div className="header">
         <p className="title">{title}</p>
       </div>
