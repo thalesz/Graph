@@ -12,6 +12,11 @@ import Home from './components/Home'
 import Users from './components/Users'
 import PageLogin from  './components/PageLogin'
 import PageAgrupMediaPond from './components/AgrupMediaPond/PageAgrupMediaPond';
+import PageDuvidaPorQuestao from './components/DuvidaPorQuestao/PageDuvidaPorQuestao';
+
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
+
 const ROLES = {
   'User': '2001',
   'Editor': '2002',
@@ -20,6 +25,8 @@ const ROLES = {
 
 function App() {
   return (
+    // <ThemeProvider theme={theme}> {/* Envolve o conteúdo com o ThemeProvider */}
+
     <Routes >  
       <Route path="/" >
         {/* rotas publicas */}
@@ -53,12 +60,17 @@ function App() {
             <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> 
               < Route path="/agrupMediaPond" element={<PageAgrupMediaPond />} />
             </Route>
+            <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> 
+              < Route path="/duvidasPorAluno" element={<PageDuvidaPorQuestao />} />
+            </Route>
+            
         </Route>
           
         <Route path="*" element={<Missing />} />
 
       </Route>
     </Routes>
+    // </ThemeProvider>
   );
 }
 

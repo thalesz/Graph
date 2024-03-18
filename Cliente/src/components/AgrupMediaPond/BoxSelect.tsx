@@ -144,27 +144,28 @@ const BoxSelect: React.FC<BoxSelectProps> = ({setOpcSelecionadas}) => {
         setSelect={setSelectTurmaId}
       />
 
-      {selectTurmaId && selectTurmaId !== "" && (
+      {/* {selectTurmaId && selectTurmaId !== "" && ( */}
         <SelectGenerico
           label={"Selecione a disciplina"}
           options={optionsDisciplina}
           select={selectDisciplinaId}
           setSelect={setSelectDisciplinaId}
+          
         />
-      )}
+       {/* )} */}
 
-      {selectDisciplinaId && selectDisciplinaId !== "" && (
+      {/* {selectDisciplinaId && selectDisciplinaId !== "" && ( */}
         <SelectGenerico
           label={"Selecione o simulado"}
           options={optionsSimulados}
           select={selectSimuladoId}
           setSelect={setSelectSimuladoId}
         />
-      )}
+      {/* )} */}
 
       {selectSimuladoId && selectSimuladoId !==""&&(
         <button onClick={handleOpcoes}>
-            clique aqui
+            Gerar Gráfico
         </button>
       )
         

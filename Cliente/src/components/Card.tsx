@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
         <p className="tag">{tags.map(tag => `#${tag} `)}</p>
         <Link to={link}>
             <button type="button" className="action">
-            Get started
+            Entrar
             </button>
         </Link>
       </div>

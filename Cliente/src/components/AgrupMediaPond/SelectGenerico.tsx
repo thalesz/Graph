@@ -1,3 +1,4 @@
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 import React from 'react';
 
 interface SelectGenericoProps {
@@ -16,7 +17,7 @@ const SelectGenerico: React.FC<SelectGenericoProps> = ({ label, options, select,
     return (
       <div className="select-container">
         <label>{label}</label>
-        <select  onChange={handleSelectChange}>
+        <select  disabled={!options || options.length === 0} onChange={handleSelectChange}>
           <option value="">
             Selecione uma opção
           </option>

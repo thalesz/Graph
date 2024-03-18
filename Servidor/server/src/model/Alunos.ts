@@ -1,19 +1,19 @@
-import mongoose, { Document, ObjectId, Schema } from 'mongoose';
+import mongoose, { Document, ObjectId, Schema, Types } from 'mongoose';
 interface IAluno extends Document {
+    _id: ObjectId
     nome: string;
-    codigo: string;
     grupo: string;
-    id_turmas: string;
+    id_turmas: ObjectId;
 
 }
 
 const alunosSchema = new Schema<IAluno>(
   {
-    nome:{
-        type:String,
+    _id:{
+        type:Types.ObjectId,
         required:true
     },
-    codigo:{
+    nome:{
         type:String,
         required:true
     },
@@ -22,7 +22,7 @@ const alunosSchema = new Schema<IAluno>(
         required:true
     },
     id_turmas:{
-        type:String,
+        type:Types.ObjectId,
         required:true
     }
   },

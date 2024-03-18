@@ -2,15 +2,15 @@
 const cardDataArray = [
     {
       title: 'Agrupamento por Média Ponderada',
-      info: 'Informação sobre o card 1.',
+      info: 'Gere um gráfico referente a média ponderada por grupos',
       tags: ['Média', 'Turma'],
       link:'/agrupMediaPond'
     },
     {
-      title: 'Título 2',
+      title: 'Dúvida por alunos',
       info: 'Informação sobre o card 2.',
-      tags: ['HTML', 'CSS'],
-      link:'/users'
+      tags: ['Dúvidas', 'Alunos'],
+      link:'/duvidasPorAluno'
     },
     {
         title: 'Título 2',

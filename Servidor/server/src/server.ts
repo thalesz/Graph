@@ -58,6 +58,7 @@ app.use('/turmas', require('./routes/api/turmas'));
 app.use('/disciplinas',require('./routes/api/disciplinas'))
 app.use('/simulados', require('./routes/api/simulados'))
 app.use('/mediaPondGrupo', require('./routes/api/mediaPondGrupo'));
+app.use('/duvidaQuestaoAluno', require('./routes/api/duvidaQuestaoAluno'))
 app.listen(PORT, () => {
   
   console.log(`Servidor rodando na porta ${PORT}`);

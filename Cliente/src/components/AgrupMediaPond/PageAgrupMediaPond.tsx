@@ -5,6 +5,8 @@ import BoxRelNotas from "./BoxRelNotas";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { IMediaPondGrupo } from "./interface";
 
+import BoxGraph from "./BoxGraph";
+
 const PageAgrupMediaPond = () =>{
     const [resultado, setResultado] = useState<IMediaPondGrupo | undefined>(undefined);
 
@@ -17,7 +19,7 @@ const PageAgrupMediaPond = () =>{
       }); 
 
     useEffect(()=>{
-        console.log("opcSelecionadas", opcSelecionadas)
+      //  console.log("opcSelecionadas", opcSelecionadas)
         const fetchData= async()=>{
             const controller = new AbortController();
             try{
@@ -31,7 +33,9 @@ const PageAgrupMediaPond = () =>{
                         signal: controller.signal
                       
                     });
-                    console.log("responseMEdiaPondGrupo", responseMediaPondGrupo);
+                   // console.log("responseMEdiaPondGrupo", responseMediaPondGrupo);
+                    setResultado(responseMediaPondGrupo.data)
+                   //  console.log("Resultado", resultado);
                 }
                 
             }catch(err:any){
@@ -57,13 +61,21 @@ const PageAgrupMediaPond = () =>{
         <section className="Page">   
             <FormPageAgrupMediaPond
                 setOpcSelecionadas={setOpcSelecionadas}
+                title={"Agrupamento por média ponderada"}
+                subtitle={"Verifique o agrupamento por média ponderada para obter insights mais refinados sobre padrões e tendências nos dados"}
             />
-            <BoxRelNotas 
-                opcSelecionadas={opcSelecionadas}
-            />
-            {/* <BoxGraph
-                opcSelecionadas={opcSelecionadas}
-            /> */}
+
+            {resultado !==undefined ? (
+                <>
+                    <BoxRelNotas 
+                        resultado={resultado}
+                    />
+                    <BoxGraph
+                         resultado = {resultado}
+                     />
+                </>   
+            ): <></>}
+
             
         </section>
     )

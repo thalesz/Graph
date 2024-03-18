@@ -71,6 +71,8 @@ const getAllMediaPondGrupo = async (req: Request, res: Response) => {
       _id: aluno._id,
       grupo: aluno.grupo, // Change this to the actual property name in your Aluno model
       media_ponderada: weightedAverage.toFixed(2), // Adjusted for 2 decimal places
+      notas: notasDoAluno.map(nota => ({ valor: nota.valor })),
+
     };
   });
 
@@ -78,6 +80,7 @@ const getAllMediaPondGrupo = async (req: Request, res: Response) => {
   const resultadoFinal = {
     alunos: resultados.map(result => ({ nome: result.nome, _id: result._id, grupo: result.grupo })),
     mediaPonds: resultados.map(result => result.media_ponderada),
+    notaAluno: resultados.map(result => result.notas) 
   };
 
   console.log(resultadoFinal);
