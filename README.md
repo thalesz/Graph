@@ -13,11 +13,13 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
 
 - Autenticação JWT para garantir a segurança das comunicações entre o cliente e o servidor. (feito)
 - Implementação de páginas no lado do cliente referente a consulta de media ponderada.(feito).
-- Construção de Api referente a 
+- Construção de Api referente a turma, disciplina, simulado e aluno(feito)
 - Recuperação de notas do aluno do servidor.(feito)
 - Cálculo de estatísticas simples, como a média das notas ponderadas. (feito)
-- Construção da tabela referente a média ponderadas. (em andamento)
-- Construção do gráfico referente a média ponderadas. (em andamento) 
+- Construção de tabela e gráfico referente a agrupamento de média ponderadas(feito)
+- Construção de api referente a questões e dúvidas.(feito)
+- Construção da tabela referente a duvidas x alunos e recursos de interatividade. (feito)
+- Construção do gráfico referente a duvidas x alunos . (feito) 
 
 ## Requisitos
 
