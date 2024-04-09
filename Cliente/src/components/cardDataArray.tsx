@@ -17,7 +17,13 @@ const cardDataArray = [
         info: 'Informação sobre o card 2.',
         tags: ['HTML', 'CSS'],
         link:'/users'
-      }
+    },
+    {
+      title: 'Média Ponderada',
+      info: 'Nota Ponderada da Turma.',
+      tags: ['Nota', 'Média Ponderada', "Média"],
+      link:'/mediaPond'
+    }
     // Adicione mais objetos conforme necessário
   ];
   

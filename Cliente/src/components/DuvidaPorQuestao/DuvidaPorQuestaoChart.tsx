@@ -135,9 +135,11 @@ const DuvidasPorQuestoesChart: React.FC<BoxDuvidaRespostaProps> = ({ duvidas, qu
               scales: {
                 x: {
                   stacked: true,
+                  max:10
                 },
                 y: {
                   stacked: true,
+                  max:10
                 }
               },
               plugins: {

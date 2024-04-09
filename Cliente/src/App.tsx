@@ -16,6 +16,8 @@ import PageDuvidaPorQuestao from './components/DuvidaPorQuestao/PageDuvidaPorQue
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
+import PageDuvPerQuestao from './components/DuvidaPorQuestaoBTS/PageDuvPerQuestao';
+import PageMediaPond from './components/MediaPond/PageMediaPond';
 
 const ROLES = {
   'User': '2001',
@@ -61,7 +63,10 @@ function App() {
               < Route path="/agrupMediaPond" element={<PageAgrupMediaPond />} />
             </Route>
             <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> 
-              < Route path="/duvidasPorAluno" element={<PageDuvidaPorQuestao />} />
+              < Route path="/duvidasPorAluno" element={<PageDuvPerQuestao />} />
+            </Route>
+            <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> 
+              < Route path="/mediaPond" element={<PageMediaPond/>} />
             </Route>
             
         </Route>

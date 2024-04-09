@@ -13,7 +13,7 @@ const BtnLogout: React.FC = ()=>{
   };
 
   return (
-    <ul className="lista-menu">
+    <ul className="lista-menu btnLogout">
       <hr className="linha-separadora" />
       <li onClick={handleLogout}>
           Logout

@@ -10,10 +10,6 @@ const turmaSchema = new Schema<ITurma>(
     nome:{
         type:String,
         required: true
-    }, 
-    codigo:{
-        type:String,
-        required:true
     }
   },
   { collection: 'Turmas' }

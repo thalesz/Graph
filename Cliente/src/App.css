@@ -4,7 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200..800&family=Hind:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200..800&family=Hind:wght@300;400;500;600;700&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('https://fonts.cdnfonts.com/css/sicret-mono-personal');
+@import url('https://fonts.cdnfonts.com/css/sicret-personal');
 
+@import url(https://db.onlinewebfonts.com/c/3b0af0a5646c72ecd1b6a4edfc1b2fc1?family=Mediator+Cond+Web+Light);
+@import url(https://db.onlinewebfonts.com/c/41993a12c268f72218902d0b376bc11b?family=Diverda+Sans+Com+Black+V1);
 
 .PageFormImage{
     margin: 0;
@@ -131,8 +135,7 @@
     transform: scale(1.1);
 }
 
-.containerNewConta{
-}
+
 .imgContainer {
     display: flex;
     align-items: center;
@@ -307,8 +310,8 @@
 
   .cont {
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap; /* Evita que os itens quebrem para a próxima linha */
-    margin: 0;
    
   }
   
@@ -322,6 +325,8 @@
       flex: 1; /* Ocupa todo o espaço disponível */ /* Espaçamento interno para o conteúdo */
       /* Outros estilos do conteúdo */
       margin-right: 200px;
+      margin-left: 250px;
+
 
 }
 
@@ -642,6 +647,7 @@ line-height: 0.8;
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin-right: 20px;
 }
 
 .switchSort input {
@@ -661,6 +667,7 @@ line-height: 0.8;
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
+  width: 60px;
 }
 
 .sliderSort:before {
@@ -697,9 +704,12 @@ input:checked + .sliderSort:before {
 .sortNameValueContainer p {
   margin-left: 10px; /* Adicione margem à esquerda para espaço entre o checkbox e o texto */
   margin-top: 10px;
+  transition: opacity 0.3s ease; /* Tempo da animação e curva de velocidade */
 }
 
-
+.colorGrap{
+  background-color:white;
+}
 .header-and-util-wrapper {
   position: relative;
   top: 100;
@@ -1063,4 +1073,281 @@ input:checked + .sliderSort:before {
   margin: 0;
   font-size: 16px;
 }
+.Box2{
+  width: 830px;
+  height: 350px;
+  margin: 10px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
 
+.Box{
+  width: 600px;
+  min-height: 350px;
+  margin: 10px;
+
+}
+.SelectBts{
+  margin: 5px;
+}
+
+.scrollable-table {
+  max-height: 10px; /* ou o valor desejado */
+  overflow-y: auto;
+}
+
+.table-wrapper {
+  height: 290px; /* ou o valor desejado */
+  overflow-y: auto;
+  background-color:white;
+  margin: 10px;
+}
+
+
+.table-wrapper thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.utils{
+  display:flex;
+  flex-direction: column;
+
+} 
+.utils > * {
+  margin-bottom: 10px; /* ou outro valor de sua escolha */
+}
+
+.All{
+  /* display: 'flex';
+  flex-direction: 'column'; */
+  min-height:880px;
+  width: 700px;
+}
+
+.apexcharts-tooltip {
+  color: black; /* ou qualquer cor desejada */
+}
+
+
+/*css referente ao Header providenciado pelo design*/
+.HeaderFinal{ 
+  height: 150px;
+  background-color:#3fb1e2;
+  display: flex;
+  align-items:center;
+}
+
+.ButtonHeaderFinal{
+  height: 80px;
+  width: 100px;
+  margin: 40px 20px 40px 50px;
+  background-color:#3fb1e2;
+  color:white;
+  border:none;
+
+
+  /* top: 20px;
+  left: 20px; */
+  /* background-color: transparent; */
+  /* border: none; */
+  cursor: pointer;
+  /* font-size: 24px; */
+  /* color: #fff; */
+ 
+}
+.ButtonHeaderFinalClose{
+  position: fixed;
+  height: 80px;
+  width: 100px;
+  background-color: transparent;
+  color:white;
+  top: 38px;
+  left: 150px;
+  border:none;
+  cursor: pointer;
+}
+
+/* .testeee{
+  position: fixed;
+} */
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* largura do menu */
+    height: 100%; /* altura do menu */
+    background-color: #333; /* cor de fundo do menu */
+    color: #fff; /* cor do texto do menu */
+    padding-top: 50px; /* espaço acima do conteúdo do menu */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+.menu ul li:hover {
+    background-color: #555; /* cor de fundo do item do menu ao passar o mouse */
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.ButtonHeaderFinal .icon {
+  font-size: 60px; /* Aumenta o tamanho do ícone */
+  transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+.ButtonHeaderFinalClose .icon {
+  font-size: 60px; /* Aumenta o tamanho do ícone */
+  transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+.ButtonHeaderFinal:hover {
+  color: #f5f5f5; /* Altera a cor de fundo do ícone ao passar o mouse */
+}
+
+.ButtonHeaderFinal:hover img {
+  filter: brightness(50%); /* Altera o brilho da imagem quando o mouse passa sobre o botão */
+}
+
+.IconButtonFinal {
+  /* background-image: url('./components/Header/img/icone-removebg-preview.png'); */
+  background-size: contain; /* Redimensiona a imagem para caber dentro do elemento */
+  background-position: center; /* Centraliza a imagem */
+  height: 100px;
+  width: 300px;
+  border:none;
+  background-color: transparent; /* Define o fundo como transparente */
+  padding: 0;
+  
+}
+.IconButtonFinal img{
+  height: 100px;
+  width: 100px;
+}
+.IconButtonFinal {
+  font-family: 'Sicret PERSONAL', sans-serif;
+  font-size: 70px;
+  color:white;
+  position: absolute;
+  margin-left: 300px;
+}
+.InputSearchFinal{
+  position: absolute;
+  margin-left: 1022px;
+  margin-top: 40px;
+}
+.InputSearchFinal input{
+  width: 492px;
+  height: 45px;
+  background-color:transparent;
+  border:none;
+  border-bottom:2px solid white;
+
+}
+
+/* .All > *{
+  flex:1;
+} */
+
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding-left: 40px; /* Ajuste conforme necessário */
+  font-family: "Mediator Cond Web Light"; 
+  font-size: 30px; /* Define o tamanho da fonte */
+  color: White; /* Define a cor do texto */
+  font-style: bold;
+  letter-spacing: 0.5px; /* Ajuste conforme necessário */
+  transition: border-bottom-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor da borda inferior */
+
+
+}
+
+.search-input::placeholder {
+  color: White; /* Define a cor do texto do placeholder */
+}
+.search-input:focus {
+  outline: none; /* Remove o contorno padrão */
+  border-bottom-color: #007bff; /* Altera a cor da borda inferior para azul quando o input está em foco */
+}
+.search-input:focus + .search-icon {
+  color: #007bff;
+  font-size: 1.5em;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Ajuste conforme necessário */
+  transform: translateY(-50%);
+  color:white;
+  font-size: 1.2em; /* Ajuste o tamanho conforme necessário */
+  /* font-family: "Mediator Cond Web Light"; */
+  
+}
+
+.RadioHeader{
+  position: absolute;
+  margin-left: 1550px;
+  margin-top: 60px;
+  background-color:transparent;
+
+}
+/* Estilo padrão do botão de rádio */
+.RadioHeader input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none; /* Remove o contorno padrão */
+  cursor: pointer; /* Altera o cursor ao passar sobre o botão de rádio */
+}
+
+.RadioHeader input[type="checkbox"]:checked {
+  background-color: #007bff;
+}
+.RadioHeader label{
+  margin-left: 5px;
+  color:white;
+  position: relative;
+  top:-6px;
+  font-family: "Diverda Sans Com Black V1";
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.menuItemsDiv{
+  margin-top: 200px;
+  margin-bottom: 490px;
+}
+.btnLogout{
+  margin-top: 300px;
+}
+
+.graph-container .g-xtext {
+  display: none;
+}

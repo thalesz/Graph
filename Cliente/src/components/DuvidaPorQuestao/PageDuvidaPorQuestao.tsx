@@ -4,6 +4,7 @@ import FormPageAgrupMediaPond from "../AgrupMediaPond/FormPageAgrupMediaPond";
 import FeedAndSeachPage from "./FeedAndSeachPage";
 import { IDuvidaQuestaoAlunos } from "../AgrupMediaPond/interface";
 import PageGraph from "./PageGraph";
+import Graph01 from "./Graph01";
 const PageDuvidaPorQuestao = ()=>{
 
     const axiosPrivate = useAxiosPrivate();
@@ -63,6 +64,7 @@ const PageDuvidaPorQuestao = ()=>{
                 resultado={resultado}
                 alunoSelec={alunoSelec}
             ></PageGraph>
+            <Graph01></Graph01>
             {/* <BoxGraph></BoxGraph> */}
         </section>
     )

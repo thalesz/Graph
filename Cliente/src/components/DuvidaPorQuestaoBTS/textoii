@@ -1,0 +1,171 @@
+import { ChartDuvPerQuestaoProps, SeriesData } from "./interfaceBoxDuvPerQuestao";
+import React, { useEffect, useState } from 'react';
+import ApexCharts from 'apexcharts';
+
+interface NomesPorGrupoQuestao {
+    [grupo: string]: {
+        [questao: string]: string[];
+    };
+}
+
+const ChartDuvPerQuestao: React.FC<ChartDuvPerQuestaoProps> = ({ duvidas, questoes, alunos, setClicked, grupos }) => {
+    const [series, setSeries] = useState<SeriesData[]>([]);
+    const [nomesPorGrupoQuestao, setNomesPorGrupoQuestao] = useState<NomesPorGrupoQuestao>({});
+
+    useEffect(() => {
+        const newSeries: SeriesData[] = [{ grupo: [], data: [] }];
+        const nomesPorGrupoQuestaoTemp: any = {};
+
+        questoes.forEach(questao => {
+            grupos.forEach(grupo => {
+                const alunosComDuvidas = duvidas.filter(duvida => {
+                    const aluno = alunos.find(aluno => aluno._id === duvida.id_aluno);
+                    const condicao = aluno && duvida.id_questao === questao._id && aluno.grupo === grupo;
+                    // console.log(`Aluno: ${aluno}, Questão: ${questao._id}, Grupo: ${grupo}, Condição: ${condicao}`);
+                    return condicao;
+                }).map(duvida => {
+                    const aluno = alunos.find(aluno => aluno._id === duvida.id_aluno);
+                    // console.log(`Aluno: ${aluno}, Dúvida: ${duvida}`);
+                    return aluno ? aluno.nome : '';
+                });
+
+                // console.log(`Alunos com dúvidas para a Questão ${questao._id} no Grupo ${grupo}:`, alunosComDuvidas);
+
+                if (!nomesPorGrupoQuestaoTemp[grupo]) {
+                    nomesPorGrupoQuestaoTemp[grupo] = {};
+                }
+
+                console.log("ALuni",alunosComDuvidas)
+                console.log("grupo", grupo)
+                console.log("aluno")
+                nomesPorGrupoQuestaoTemp[grupo][questao._id] = alunosComDuvidas;
+            });
+
+            newSeries[0].data.push(grupos.map(grupo => nomesPorGrupoQuestaoTemp[grupo][questao._id].length));
+        });
+
+        console.log('NomesPorGrupoQuestaoTemp:', nomesPorGrupoQuestaoTemp);
+        setSeries(newSeries);
+        setNomesPorGrupoQuestao(nomesPorGrupoQuestaoTemp);
+
+    }, [duvidas, questoes, alunos, grupos]);
+
+    useEffect(() => {
+        if (series.length > 0) {
+            const options = {
+                series: series[0].data.map((data, index) => ({
+                    name: series[0].grupo[index],
+                    data: data
+                    
+                })),
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    stacked: true,
+                    toolbar: {
+                        show: true
+                    },
+                    zoom: {
+                        enabled: true
+                    }
+                },
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        legend: {
+                            position: 'bottom',
+                            offsetX: -10,
+                            offsetY: 0
+                        }
+                    }
+                }],
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        borderRadius: 10,
+                        dataLabels: {
+                            total: {
+                                enabled: true,
+                                style: {
+                                    fontSize: '13px',
+                                    fontWeight: 900
+                                }
+                            }
+                        }
+                    },
+                },
+                xaxis: {
+                    type: 'text',
+                    categories: questoes.map(questao => 'Questão: ' + questao.enunciado),
+                },
+                legend: {
+                    position: 'right',
+                    offsetY: 40,
+                    formatter: function(seriesName: any, opts: { w: { globals: { series: { [x: string]: any; }; }; }; seriesIndex: number; }) {
+                        return grupos[opts.seriesIndex];
+                    }
+                
+                },
+                fill: {
+                    opacity: 1
+                },tooltip: {
+                    // Ativar o tooltip
+                    enabled: true,
+                    // Mostrar o título do eixo x no tooltip
+                    x: {
+                        show: true,
+                        // Formatar o valor do eixo x (se necessário)
+                        format: 'text'
+                    },
+                    // Definir um formatter personalizado para o título do tooltip (nome da série)
+                    y: {
+                        title: {
+                            formatter: (seriesName: any) => seriesName
+                        }
+                    },
+                    // Definir um formatter personalizado para o tooltip
+                    custom: ({ series, seriesIndex, dataPointIndex, w }: { series: any[]; seriesIndex: number; dataPointIndex: number; w: any; }) => {
+                        let grupo =  grupos[seriesIndex]
+
+                        console.log("nome", nomesPorGrupoQuestao)
+
+                        let questaoId = questoes[dataPointIndex]._id
+                        console.log("questaoid", questaoId)
+                        console.log("G", grupo)
+
+                        if (nomesPorGrupoQuestao[grupo] && nomesPorGrupoQuestao[grupo][questaoId]) {
+                            const alunos = nomesPorGrupoQuestao[grupo][questaoId]; // Obtém os nomes dos alunos para o grupo e a questão
+                    
+                            // Constrói o conteúdo da tooltip com os nomes dos alunos
+                            let tooltipContent = `<div class='custom-tooltip'><strong>${grupo}</strong> - Questão ${questaoId}<br>`;
+                            tooltipContent += `Alunos (${alunos.length}): `;
+                            alunos.forEach(nome => {
+                                tooltipContent += `<span>${nome}</span>, `;
+                            });
+                            tooltipContent = tooltipContent.slice(0, -2);
+                            tooltipContent += '</div>';
+                    
+                            return tooltipContent;
+                        } else {
+                            return ''; // Retorna uma string vazia se não houver dados para exibir
+                        }
+                    }
+                    
+                }
+            };
+
+            const chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+
+            // Cleanup on component unmount
+            return () => chart.destroy();
+        }
+
+    }, [series, nomesPorGrupoQuestao, questoes]);
+
+    return (
+        <div id="chart"></div>
+    );
+}
+
+export default ChartDuvPerQuestao;
