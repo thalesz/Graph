@@ -19,7 +19,11 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
 - Construção de tabela e gráfico referente a agrupamento de média ponderadas(feito)
 - Construção de api referente a questões e dúvidas.(feito)
 - Construção da tabela referente a duvidas x alunos e recursos de interatividade. (feito)
-- Construção do gráfico referente a duvidas x alunos . (feito) 
+- Construção do gráfico referente a duvidas x alunos . (feito)
+- Implementação do cabeçalho principal do cliente. (feito)
+- Adição de Bootstrap.(feito)
+- Adição das Bibliotecas AphexChartsJS e PlotlyJS para implementação de gráficos.(feito).
+- Alteração do Banco de Dados para implementação de novas métricas(feito)
 
 ## Requisitos
 
