@@ -9,7 +9,7 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
 - **MongoDB:** Banco de dados NoSQL usado para armazenar dados de forma flexível e escalável.
 - **React com TypeScript:** Biblioteca JavaScript para construção de interfaces de usuário, utilizada para o desenvolvimento do aplicativo cliente.
 
-## Funcionalidades
+## Funcionalidade
 
 - Autenticação JWT para garantir a segurança das comunicações entre o cliente e o servidor. (feito)
 - Implementação de páginas no lado do cliente referente a consulta de media ponderada.(feito).
@@ -24,6 +24,46 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
 - Adição de Bootstrap.(feito)
 - Adição das Bibliotecas AphexChartsJS e PlotlyJS para implementação de gráficos.(feito).
 - Alteração do Banco de Dados para implementação de novas métricas(feito)
+- Adição de novas métricas (Em andamento)
+
+  ## Métricas
+  # Agrupamento média ponderada:
+
+    Seleção de Turma (feito)
+    Seleção de Simulado (feito)
+    Seleção de Disciplina (feito)
+    Ordenação de Alunos: (feito)
+    Visualização Gráfica:(feito)
+    Visualização em Tabela (feito)
+    Atualização Dinâmica (feito)
+
+  # Duvida: 
+    Seleção de Turma (Feito)
+    Seleção de Simulado (Feito)
+    Seleção de Disciplina (Feito)
+    Atualização Dinâmica dos Dropdowns (Feito)
+    Visualização de Gráfico de Barras (Feito)
+    Exibição de Informações no Gráfico (Feito)
+    Atualização Dinâmica dos Dropdowns (Feito)
+    Atualização Dinâmica da Tabela de Alunos (Feito)
+
+  # Duvida_filtroaluno:
+    Seleção de Turma (Feito)
+    Seleção de Simulado (Feito)
+    Seleção de Disciplina (Feito)
+    Seleção de Alunos: Os usuários podem selecionar os alunos da turma usando uma tabela interativa. Há também uma opção para selecionar/deselecionar todos os alunos de uma vez. (Feito)
+    Atualização Dinâmica dos Dropdowns (Feito)
+    Atualização Dinâmica da Tabela de Alunos (Feito)
+    Visualização de Gráfico de Barras (Feito)
+    Exibição de Informações no Gráfico (Feito)
+
+  # Media Ponderada
+    Seleção de Turma, Simulado e Disciplina (Feito)
+    Atualização Dinâmica dos Dropdowns (Feito)
+    Visualização de Gráfico de Barras (Feito)
+    Exibição de Informações no Gráfico (Feito)
+    Tabela de Alunos (Feito)
+
 
 ## Requisitos
 
