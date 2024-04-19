@@ -3,7 +3,7 @@ import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 
 // import FormDuvPerQuestao from "./BoxOneDuvPerQuestao";
 import BoxOneDuvPerQuestao from "./BoxOneDuvPerQuestao";
-import { IDuvidaQuestaoAlunos } from "./interfaceBoxDuvPerQuestao";
+import { IAluno, IDuvidaQuestaoAlunos } from "./interfaceBoxDuvPerQuestao";
 import BoxTwoDuvPerQuestao from "./BoxTwoDuvPerQuestao";
 import BoxThreeDuvPerQuestao from "./BoxThreeDuvPerQuestao";
 
@@ -55,11 +55,30 @@ const PageDuvPerQuestao: React.FC = ()=>{
         fetchData()
     },[opcSelecionadas])
 
+
+    useEffect(() => {
+      if (resultado) {
+          const alunosFiltrados = resultado.alunos.filter((aluno: IAluno) =>alunoSelec.includes(aluno._id));
+          const duvidasFiltradas = resultado.duvidas.filter((duvida) => alunoSelec.includes(duvida.id_aluno));
+      
+          console.log("duvidasFiltradas", duvidasFiltradas)
+
+          setResultadoFiltrado({
+              alunos: alunosFiltrados,
+              questoes: resultado.questoes,
+              duvidas: duvidasFiltradas
+          });
+      }
+      if (alunoSelec.length===0){
+          setResultadoFiltrado(undefined)
+      }
+  }, [alunoSelec]);
+
     return (
         <Container fluid>
-          <Row className="h-100 gx-1">
+          <Row>
             <Col>
-              <Row className="h-100">
+              <Row>
                 <Col>
                   <BoxOneDuvPerQuestao
                     title={"Dúvida por questão"}
@@ -76,13 +95,12 @@ const PageDuvPerQuestao: React.FC = ()=>{
                 </Col>
               </Row>
             </Col>
-            <Col style={{ minHeight: '880px', width: '700px' }} className="h-100">
+            <Col style={{height: '350px', width: '700px' }}>
               <BoxThreeDuvPerQuestao
                 alunoSelec={alunoSelec}
-                resultado={resultado}
+                resultado={resultadoFiltrado!==undefined? resultadoFiltrado: resultado}
                 // style={{ height: '100%' }}
               />
-               <Graph03/>
             </Col>
 
           </Row>

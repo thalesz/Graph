@@ -4,6 +4,7 @@ interface IAluno extends Document {
     nome: string;
     grupo: string;
     id_turmas: ObjectId;
+    codigo:string;
 
 }
 
@@ -18,6 +19,10 @@ const alunosSchema = new Schema<IAluno>(
         required:true
     },
     grupo:{
+        type:String,
+        required:true
+    },
+    codigo:{
         type:String,
         required:true
     },

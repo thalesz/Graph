@@ -11,18 +11,13 @@ class Graph02 extends React.Component<Graph02Props> {
   render() {
     const { resultado } = this.props; // Recebendo props
 
-    // Verifica se há resultado disponível
-    if (!resultado) {
-      return <div>Dados não disponíveis.</div>;
-    }
-
     // Extrai os nomes dos alunos, as médias ponderadas e as notas de cada aluno
-    const alunosNomes = resultado.alunos.map((aluno: IAluno) => aluno.nome);
-    const mediasPonderadas = resultado.mediaPonds.map(media => parseFloat(media));
+    const alunosNomes = resultado?.alunos.map((aluno: IAluno) => aluno.nome);
+    const mediasPonderadas = resultado?.mediaPonds.map(media => parseFloat(media));
 
     // Define o texto de legenda para cada barra
-    const legendas = alunosNomes.map((nome, index) => {
-      const notas: any = resultado.notaAluno[index];
+    const legendas = alunosNomes?.map((nome, index) => {
+      const notas: any = resultado?.notaAluno[index];
       console.log("notas", notas); // Verifica as notas no console
 
       const notasFormatadas = notas.map((nota: { valor: any; }) => {
@@ -50,7 +45,7 @@ class Graph02 extends React.Component<Graph02Props> {
                       hoverinfo: 'y+text', // Exibir legenda somente no hover
                     }
                   ]}
-                  layout={{ width: 800, height: 600, title: 'Média ponderada por aluno' }}
+                  layout={{ width: 800, height: 700, title: 'Média ponderada por aluno' }}
                 />
           </div>
         </Card>

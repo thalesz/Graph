@@ -50,6 +50,7 @@ export interface ITurma {
     nome: string;
     _id: string;
     grupo: string;
+    codigo:string;
     
   }
   
@@ -138,4 +139,8 @@ export interface ITurma {
     alunosMarcados:string[]
     setAlunosMarcados: React.Dispatch<React.SetStateAction<string[]>>;
     children?: React.ReactNode; // Adicione essa linha
+ }
+
+ export interface BoxThreeGraphAgrupProps{
+  resultado: IMediaPondGrupo | any;
  }

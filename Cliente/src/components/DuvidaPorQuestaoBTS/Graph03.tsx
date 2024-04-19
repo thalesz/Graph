@@ -1,48 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
+import { ChartDuvPerQuestaoProps, IQuestoes, IDuvidas, IAluno } from './interfaceBoxDuvPerQuestao';
 
-const Graph03: React.FC = () => {
-  const trace1 = {
-    x: ['Liam', 'Sophie', 'Jacob', 'Mia', 'William', 'Olivia'],
-    y: [8.0, 8.0, 12.0, 12.0, 13.0, 20.0],
-    type: 'bar',
-    text: ['4.17 below the mean', '4.17 below the mean', '0.17 below the mean', '0.17 below the mean', '0.83 above the mean', '7.83 above the mean'],
-    marker: {
-      color: 'rgb(142,124,195)'
-    }
-  };
+const Graph03: React.FC<ChartDuvPerQuestaoProps> = ({ duvidas, questoes, alunos, setClicked, grupos }) => {
+  const [data, setData] = useState<any[]>([]); // Array para armazenar os dados do gráfico
 
+  useEffect(() => {
+    // Função para calcular a quantidade de dúvidas por grupo para cada questão
+    const calcularDuvidasPorGrupo = () => {
+      const newData: any[] = [];
+    
+      grupos.forEach((grupo: any) => {
+        const nomeGrupo = grupo;
+        const duvidasPorGrupo: number[] = Array(questoes.length).fill(0); // Inicializa o array com zeros para cada grupo
+        const nomesAlunosPorGrupo: string[][] = Array(questoes.length).fill([]); // Array para armazenar os nomes dos alunos com dúvidas por grupo
+    
+        questoes.forEach((questao: any, index: number) => {
+          const alunosComDuvidas: string[] = []; // Array para armazenar os nomes dos alunos com dúvidas nesta questão
+    
+          duvidas.forEach((duvida: any) => {
+            const alunoComDuvida = alunos.find((aluno: any) => aluno._id === duvida.id_aluno && aluno.grupo === grupo);
+            if (duvida.id_questao === questao._id && alunoComDuvida) {
+              duvidasPorGrupo[index]++; // Incrementa a contagem de dúvidas para a questão atual se ela pertencer ao grupo
+              alunosComDuvidas.push(alunoComDuvida.nome); // Adiciona o nome do aluno com dúvida ao array
+            }
+          });
+    
+          nomesAlunosPorGrupo[index] = alunosComDuvidas; // Define os nomes dos alunos com dúvidas para esta questão
+        });
+    
+        newData.push({
+          x: questoes.map((questao: any) => questao.enunciado), // Enunciados das questões
+          y: duvidasPorGrupo, // Quantidade de dúvidas por grupo
+          name: nomeGrupo, // Nome do grupo
+          type: 'bar',
+          text: nomesAlunosPorGrupo.map((nomes, index) => nomes.join(', ')) // Usa os nomes dos alunos com dúvidas como texto para cada item
+        });
+      });
+    
+      setData(newData);
+    };
+    
 
-  const layout = {
-    title: 'Number of Graphs Made this Week',
-    font: {
-      family: 'Raleway, sans-serif'
-    },
-    showlegend: false,
-    xaxis: {
-      tickangle: -45
-    },
-    yaxis: {
-      zeroline: false,
-      gridwidth: 2
-    },
-    bargap: 0.05
-  };
+    calcularDuvidasPorGrupo();
+  }, [duvidas, questoes, alunos, grupos]);
 
   return (
     <Plot
-      
-      data={[ 
-        {
-          x: trace1.x,
-          y: trace1.y,
-          type: 'bar',
-          text: trace1.text, // Texto de legenda para cada barra
-          hoverinfo: 'y+text', // Exibir legenda somente no hover
-        }
-      ]}
-      layout={layout}
-      style={{ width: '100%', height: '100%' }}
+
+      className='GraphDuvida'
+      data={data}
+      layout={{
+        barmode: 'stack',
+        legend: { traceorder: 'normal' }, // Define a ordem das legendas como "normal",
+        width: 800, height: 700, title: 'Dúvidas por Questão'
+      }}
     />
   );
 };

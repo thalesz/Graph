@@ -330,8 +330,6 @@
 
 }
 
-
-
 .Logout{
   position: fixed;
   top: 92vh; /* Ajuste a posição do topo conforme necessário */
@@ -353,7 +351,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 300px;
-  height: 370px;
+  height: 350px;
 
 }
 
@@ -636,6 +634,7 @@ line-height: 0.8;
   justify-content: space-between; 
   align-items:center;
   max-width: 75%;
+  max-height: 30%;
 }
 
 .sortNameValueContainer {
@@ -1074,19 +1073,27 @@ input:checked + .sliderSort:before {
   font-size: 16px;
 }
 .Box2{
-  width: 830px;
-  height: 350px;
+  width: 840px;
+  height: 800px;
   margin: 10px;
   display: flex;
   align-items:center;
+  
   justify-content: center;
 }
-
+.col{
+  margin: 0;
+}
 .Box{
   width: 600px;
-  min-height: 350px;
+  min-height: 250px;
   margin: 10px;
+  margin-bottom: 0px;
+  padding: 0;
 
+}
+.BtnGerarGrafico{
+  margin-left: 3px;
 }
 .SelectBts{
   margin: 5px;
@@ -1101,7 +1108,7 @@ input:checked + .sliderSort:before {
   height: 290px; /* ou o valor desejado */
   overflow-y: auto;
   background-color:white;
-  margin: 10px;
+  margin: 5px;
 }
 
 
@@ -1123,8 +1130,8 @@ input:checked + .sliderSort:before {
 .All{
   /* display: 'flex';
   flex-direction: 'column'; */
-  min-height:880px;
-  width: 700px;
+  /* min-height:880px;
+  width: 700px; */
 }
 
 .apexcharts-tooltip {
@@ -1350,4 +1357,13 @@ input:checked + .sliderSort:before {
 
 .graph-container .g-xtext {
   display: none;
+}
+
+.GraphDuvidaPorQuestao{
+  position: relative;
+}
+.GraphDuvida{
+  width: 100%; /* ocupa toda a largura do contêiner pai */
+  height: 100%; /* ocupa toda a altura do contêiner pai */
+  position: absolute; /* para se ajustar dentro do pai */
 }

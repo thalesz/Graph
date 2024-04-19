@@ -162,6 +162,7 @@ const FormOneDuvPerQuestao: React.FC<any> = ({setOpcSelecionadas})=>{
 
 
                 <Button
+                    className='BtnGerarGrafico'
                     variant="primary"
                     disabled={isLoading}
                     onClick={!isLoading ? handleOpcoes : undefined}

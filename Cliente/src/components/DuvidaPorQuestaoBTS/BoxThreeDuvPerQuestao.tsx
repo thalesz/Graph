@@ -4,6 +4,7 @@ import HeaderBts from "./HeaderBts";
 import { BoxThreeDuvPerQuestaoProps, IAluno, IDuvidas, IQuestoes } from "./interfaceBoxDuvPerQuestao";
 import Card from 'react-bootstrap/Card'
 import ChartDuvPerQuestao from "./ChartDuvPerQuestao";
+import Graph03 from "./Graph03";
 
 const BoxThreeDuvPerQuestao: React.FC<BoxThreeDuvPerQuestaoProps> = ({alunoSelec, resultado})=>{
     const [alunos, setAlunos] = useState<IAluno[]>([]);
@@ -67,16 +68,18 @@ const BoxThreeDuvPerQuestao: React.FC<BoxThreeDuvPerQuestaoProps> = ({alunoSelec
         <Card body  
             bg={"secondary"}
             text={"white"}
-            className="mb-2 Box All"
-            >
+            className="mb-2 Box2 All GraphDuvidaPorQuestao">
 
-                <HeaderBts
+                {/* <HeaderBts
                     title="Gráfico"
-                />
+                /> */}
 
-                <ChartDuvPerQuestao duvidas={duvidas} questoes={questoes} alunos={alunos} setClicked={setClicked} grupos={grupos}>
+                {/* <ChartDuvPerQuestao duvidas={duvidas} questoes={questoes} alunos={alunos} setClicked={setClicked} grupos={grupos}>
                     
-                </ChartDuvPerQuestao>
+                </ChartDuvPerQuestao > */}
+                <Graph03 duvidas={duvidas} questoes={questoes} alunos={alunos} setClicked={setClicked} grupos={grupos}>
+                  
+                </Graph03>
                 
 
         </Card>

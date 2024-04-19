@@ -70,6 +70,7 @@ const getAllMediaPondGrupo = async (req: Request, res: Response) => {
       nome: aluno.nome, // Change this to the actual property name in your Aluno model
       _id: aluno._id,
       grupo: aluno.grupo, // Change this to the actual property name in your Aluno model
+      codigo:aluno.codigo,
       media_ponderada: weightedAverage.toFixed(2), // Adjusted for 2 decimal places
       notas: notasDoAluno.map(nota => ({ valor: nota.valor })),
 
@@ -78,7 +79,7 @@ const getAllMediaPondGrupo = async (req: Request, res: Response) => {
 
   // Creating the final object in the format of the IMediaPondGrupo interface
   const resultadoFinal = {
-    alunos: resultados.map(result => ({ nome: result.nome, _id: result._id, grupo: result.grupo })),
+    alunos: resultados.map(result => ({ nome: result.nome, _id: result._id, grupo: result.grupo, codigo:result.codigo })),
     mediaPonds: resultados.map(result => result.media_ponderada),
     notaAluno: resultados.map(result => result.notas) 
   };

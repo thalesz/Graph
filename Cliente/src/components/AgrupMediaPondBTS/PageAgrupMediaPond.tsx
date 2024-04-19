@@ -1,32 +1,28 @@
 import { useEffect, useState } from "react";
-import BoxOneDuvPerQuestao from "../DuvidaPorQuestaoBTS/BoxOneDuvPerQuestao"
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { IAluno, IMediaPondGrupo } from "../DuvidaPorQuestaoBTS/interfaceBoxDuvPerQuestao";
-import BoxListAlunoSelect from "./BoxListAlunoSelec";
-import BoxGraphAlunoSelect from "./BoxGraphAlunoSelect";
-import Graph02 from "./Graph02";
+
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import BoxOneDuvPerQuestao from "../DuvidaPorQuestaoBTS/BoxOneDuvPerQuestao";
+import BoxListAlunoSelect from "../MediaPond/BoxListAlunoSelec";
+import BoxThreeGraphAgrup from "./BoxThreeGraphAgrup";
 
-const PageMediaPond:React.FC=()=>{
-
+const PageAgrupMediaPond: React.FC = ()=>{
 
     const [resultado, setResultado] = useState<IMediaPondGrupo | undefined>(undefined);
     const [resultadoFiltrado, setResultadoFiltrado] = useState<IMediaPondGrupo | undefined>(undefined);
     const [alunosMarcados, setAlunosMarcados] = useState<string[]>([]); // Estado para armazenar IDs de alunos marcados
 
-
     const axiosPrivate = useAxiosPrivate(); 
 
-    
     const [opcSelecionadas, setOpcSelecionadas] = useState({
         turma: '',
         disciplina: '',
         simulado: ''
     }); 
-
     useEffect(()=>{
         console.log(opcSelecionadas)
         console.log("resultaado", resultado)
@@ -89,22 +85,8 @@ const PageMediaPond:React.FC=()=>{
             setResultadoFiltrado(undefined)
         }
     }, [alunosMarcados]);
+
     return(
-        // <section>
-
-        //     <BoxOneDuvPerQuestao 
-        //         setOpcSelecionadas={setOpcSelecionadas}
-        //         title="Média Ponderada"
-        //         ></BoxOneDuvPerQuestao>
-        //     <BoxListAlunoSelect resultado={resultado} setAlunosMarcados={setAlunosMarcados} alunosMarcados={alunosMarcados}>
-        //     </BoxListAlunoSelect>
-        //     <BoxGraphAlunoSelect resultado={resultadoFiltrado !==undefined ? resultadoFiltrado:resultado}></BoxGraphAlunoSelect>
-            
-        //     <Graph02 resultado={resultadoFiltrado !==undefined ? resultadoFiltrado:resultado}></Graph02>
-
-
-        // </section>
-
         <Container fluid>
         <Row>
           <Col>
@@ -122,11 +104,13 @@ const PageMediaPond:React.FC=()=>{
             </Row>
           </Col>
           <Col style={{ minHeight: '650px', width: '700px' }} >
-            <Graph02 resultado={resultadoFiltrado !==undefined ? resultadoFiltrado:resultado}></Graph02>
+            {/* <Graph02 resultado={resultadoFiltrado !==undefined ? resultadoFiltrado:resultado}></Graph02> */}
+            <BoxThreeGraphAgrup resultado={resultadoFiltrado!==undefined? resultadoFiltrado:resultado}></BoxThreeGraphAgrup>
           </Col>
 
         </Row>
       </Container>
     )
 }
-export default PageMediaPond
+
+export default PageAgrupMediaPond

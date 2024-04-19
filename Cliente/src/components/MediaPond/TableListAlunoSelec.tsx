@@ -35,6 +35,8 @@ const TableListAlunoSelect: React.FC<TableListAlunoSelectProps> = ({ resultado, 
                             <th></th>
                             <th>Aluno</th>
                             <th>Grupo</th>
+                            <th>Código</th>
+
                             <th>Notas</th>
                             <th>Média Ponderada</th>
                         </tr>
@@ -51,6 +53,7 @@ const TableListAlunoSelect: React.FC<TableListAlunoSelectProps> = ({ resultado, 
                                 </td>
                                 <td>{aluno.nome}</td>
                                 <td>{aluno.grupo}</td>
+                                <td>{aluno.codigo}</td>
                                 <td>
                                     <ul>
                                         {resultado.notaAluno[index].map((nota: any, notaIndex: any) => (
@@ -58,6 +61,7 @@ const TableListAlunoSelect: React.FC<TableListAlunoSelectProps> = ({ resultado, 
                                         ))}
                                     </ul>
                                 </td>
+
                                 <td>{resultado.mediaPonds[index]}</td>
                             </tr>
                         ))}

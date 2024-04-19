@@ -11,7 +11,8 @@ import RequireAuth from './components/RequireAuth';
 import Home from './components/Home'
 import Users from './components/Users'
 import PageLogin from  './components/PageLogin'
-import PageAgrupMediaPond from './components/AgrupMediaPond/PageAgrupMediaPond';
+// import PageAgrupMediaPond from './components/AgrupMediaPond/PageAgrupMediaPond';
+import PageAgrupMediaPond from './components/AgrupMediaPondBTS/PageAgrupMediaPond';
 import PageDuvidaPorQuestao from './components/DuvidaPorQuestao/PageDuvidaPorQuestao';
 
 import { ThemeProvider } from '@mui/material/styles';
