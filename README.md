@@ -29,40 +29,40 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
   ## Métricas
   # Agrupamento média ponderada:
 
-    Seleção de Turma (feito)
-    Seleção de Simulado (feito)
-    Seleção de Disciplina (feito)
-    Ordenação de Alunos: (feito)
-    Visualização Gráfica:(feito)
-    Visualização em Tabela (feito)
-    Atualização Dinâmica (feito)
+   - Seleção de Turma (feito)
+   - Seleção de Simulado (feito)
+   - Seleção de Disciplina (feito)
+   -  Ordenação de Alunos: (feito)
+   - Visualização Gráfica:(feito)
+   - Visualização em Tabela (feito)
+  - Atualização Dinâmica (feito)
 
   # Duvida: 
-    Seleção de Turma (Feito)
-    Seleção de Simulado (Feito)
-    Seleção de Disciplina (Feito)
-    Atualização Dinâmica dos Dropdowns (Feito)
-    Visualização de Gráfico de Barras (Feito)
-    Exibição de Informações no Gráfico (Feito)
-    Atualização Dinâmica dos Dropdowns (Feito)
-    Atualização Dinâmica da Tabela de Alunos (Feito)
+  -  Seleção de Turma (Feito)
+  - Seleção de Simulado (Feito)
+  -  Seleção de Disciplina (Feito)
+  - Atualização Dinâmica dos Dropdowns (Feito)
+  -  Visualização de Gráfico de Barras (Feito)
+  - Exibição de Informações no Gráfico (Feito)
+  - Atualização Dinâmica dos Dropdowns (Feito)
+  - Atualização Dinâmica da Tabela de Alunos (Feito)
 
   # Duvida_filtroaluno:
-    Seleção de Turma (Feito)
-    Seleção de Simulado (Feito)
-    Seleção de Disciplina (Feito)
-    Seleção de Alunos: Os usuários podem selecionar os alunos da turma usando uma tabela interativa. Há também uma opção para selecionar/deselecionar todos os alunos de uma vez. (Feito)
-    Atualização Dinâmica dos Dropdowns (Feito)
-    Atualização Dinâmica da Tabela de Alunos (Feito)
-    Visualização de Gráfico de Barras (Feito)
-    Exibição de Informações no Gráfico (Feito)
+   - Seleção de Turma (Feito)
+   - Seleção de Simulado (Feito)
+   - Seleção de Disciplina (Feito)
+   - Seleção de Alunos: Os usuários podem selecionar os alunos da turma usando uma tabela interativa. Há também uma opção para selecionar/deselecionar todos os alunos de uma vez. (Feito)
+   - Atualização Dinâmica dos Dropdowns (Feito)
+   - Atualização Dinâmica da Tabela de Alunos (Feito)
+   - Visualização de Gráfico de Barras (Feito)
+   - Exibição de Informações no Gráfico (Feito)
 
   # Media Ponderada
-    Seleção de Turma, Simulado e Disciplina (Feito)
-    Atualização Dinâmica dos Dropdowns (Feito)
-    Visualização de Gráfico de Barras (Feito)
-    Exibição de Informações no Gráfico (Feito)
-    Tabela de Alunos (Feito)
+   - Seleção de Turma, Simulado e Disciplina (Feito)
+   - Atualização Dinâmica dos Dropdowns (Feito)
+   - Visualização de Gráfico de Barras (Feito)
+   - Exibição de Informações no Gráfico (Feito)
+   - Tabela de Alunos (Feito)
 
 
 ## Requisitos
