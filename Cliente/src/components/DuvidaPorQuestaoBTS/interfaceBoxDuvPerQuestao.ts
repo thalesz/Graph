@@ -144,3 +144,13 @@ export interface ITurma {
  export interface BoxThreeGraphAgrupProps{
   resultado: IMediaPondGrupo | any;
  }
+
+
+ export interface ResultadoMetricas{
+    alunos: IAluno[]
+    compreensao: string[],
+    assertividade: string[]
+ }
+
+
+

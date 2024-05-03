@@ -42,7 +42,7 @@ const TableListAlunoSelect: React.FC<TableListAlunoSelectProps> = ({ resultado, 
                         </tr>
                     </thead>
                     <tbody className='tableBody'>
-                        {resultado.alunos.map((aluno: any, index: any) => (
+                        {resultado!==undefined && resultado.alunos.map((aluno: any, index: any) => (
                             <tr key={index}>
                                 <td>
                                     <input
@@ -57,8 +57,8 @@ const TableListAlunoSelect: React.FC<TableListAlunoSelectProps> = ({ resultado, 
                                 <td>
                                     <ul>
                                         {resultado.notaAluno[index].map((nota: any, notaIndex: any) => (
-                                            <li key={notaIndex}>{nota.valor}</li>
-                                        ))}
+                                                <li key={notaIndex}>{nota.valor}</li>
+                                            ))}
                                     </ul>
                                 </td>
 

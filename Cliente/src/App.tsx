@@ -19,6 +19,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import PageDuvPerQuestao from './components/DuvidaPorQuestaoBTS/PageDuvPerQuestao';
 import PageMediaPond from './components/MediaPond/PageMediaPond';
+import PageMetricas from './components/Metricas/PageMetricas';
 
 const ROLES = {
   'User': '2001',
@@ -69,7 +70,12 @@ function App() {
             <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> 
               < Route path="/mediaPond" element={<PageMediaPond/>} />
             </Route>
-            
+            <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> 
+              < Route path="/metricas" element={<PageMetricas url='/metricas'/>} />
+            </Route>
+            <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> 
+              < Route path="/medias" element={<PageMetricas url='/medias'/>} />
+            </Route>
         </Route>
           
         <Route path="*" element={<Missing />} />

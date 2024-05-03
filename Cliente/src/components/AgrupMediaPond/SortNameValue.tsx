@@ -4,6 +4,8 @@ import { SortNameValueProps } from "./interface";
 const SortNameValue: React.FC<SortNameValueProps> = ({ sortValue, setSortValue }) => {
   const handleSortChange = () => {
     // Toggle between 'n' and 'v' when the checkbox is clicked
+
+    console.log("aususu")
     setSortValue((prevSortValue) => (prevSortValue === 'n' ? 'v' : 'n'));
   };
 

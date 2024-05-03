@@ -11,7 +11,7 @@ class GraphAlunoMediaPondScatter extends React.Component<BoxThreeGraphAgrupProps
         if (resultado === undefined || resultado === null) {
             return <div>No data available.</div>;
         }
-
+        //hook
         const alunosNomes = resultado.alunos.map((aluno: IAluno) => aluno.nome);
         const mediasPonderadas = resultado?.mediaPonds.map((media: string) => parseFloat(media));
 

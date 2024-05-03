@@ -64,6 +64,14 @@ Este é um projeto que visa fornecer gráficos educacionais com base nas notas d
    - Exibição de Informações no Gráfico (Feito)
    - Tabela de Alunos (Feito)
 
+    
+  # Métricas
+    - Seleção de Turma, Simulado e Disciplina. (Feito)
+    - Tabela de Alunos. (Feito)
+    - Gráfico de Barras: Mostra o desempenho do aluno selecionado em métricas específicas, como Média Tradicional, Média Ponderada, Grau de Assertividade e Nível de Compreensão. Os valores são exibidos como barras coloridas no gráfico. (Feito)
+    Atualização Dinâmica. (Feito)
+    - Feedback Visual. (Feito)
+    - Alterar o tipo de gráfico selecionado (Dispersão ou Barras)(Feito)
 
 ## Requisitos
 

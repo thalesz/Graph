@@ -18,6 +18,8 @@ const BoxListAlunoSelect: React.FC<TableListAlunoSelectProps> = ({resultado, alu
   useEffect(()=>{
     console.log("alunos marcados", alunosMarcados);
   },[alunosMarcados])
+
+  
     useEffect(()=>{
         if (resultado) {
             // Filtrar os alunos com base no nome digitado

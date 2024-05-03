@@ -11,9 +11,9 @@ const BoxOneDuvPerQuestao: React.FC<BoxOneDuvPerQuestaoProps>=({title, setOpcSel
             text={"white"}
             className="mb-2 Box"
           >
-            <HeaderBts
+            {/* <HeaderBts
             title={title}
-            />
+            /> */}
             <FormOneDuvPerQuestao
               setOpcSelecionadas={setOpcSelecionadas}
             >

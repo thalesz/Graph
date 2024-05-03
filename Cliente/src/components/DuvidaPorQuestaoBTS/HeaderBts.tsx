@@ -1,12 +1,17 @@
-import { HeaderBtsProps } from "./interfaceBoxDuvPerQuestao"
+import React from 'react';
+import { HeaderBtsProps } from "./interfaceBoxDuvPerQuestao";
 import Card from 'react-bootstrap/Card';
 
+const HeaderBts: React.FC<HeaderBtsProps>= ({ title }) => {
+    const cardHeaderStyle = {
+        backgroundColor: 'transparent', // Set background color to transparent
+    };
 
-const HeaderBts: React.FC<HeaderBtsProps>= ({title})=>{
-    return(
+    return (
         <>
-        <Card.Header as="h5">{title}</Card.Header>
+            <Card.Header as="h5" style={cardHeaderStyle}>{title}</Card.Header>
         </>
-    )
-}
-export default HeaderBts
+    );
+};
+
+export default HeaderBts;
